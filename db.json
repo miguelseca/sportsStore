@@ -1,0 +1,124 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "first_name": "Miguel",
+      "last_name": "Seca",
+      "email": "miguel.seca@gmail.com"
+    },
+    {
+      "id": 2,
+      "first_name": "Francisco",
+      "last_name": "Cenas",
+      "email": "steve@codingthesmartway.com"
+    },
+    {
+      "id": 3,
+      "first_name": "Ann",
+      "last_name": "Smith",
+      "email": "ann@codingthesmartway.com"
+    }
+  ],
+
+  "categories": [
+    {
+      "id": 1,
+      "name": "Football",
+      "icon": "spinner",
+      "color": "aquamarine"
+    },
+    {
+      "id": 2,
+      "name": "Trail running",
+      "icon": "image",
+      "color": "darkseagreen"
+    },
+    {
+      "id": 3,
+      "name": "Climbing",
+      "icon": "moon",
+      "color": "lightgreen"
+    },
+    {
+      "id": 4,
+      "name": "Curling",
+      "icon": "map",
+      "color": "indianred"
+    },
+    {
+      "id": 5,
+      "name": "Cenas",
+      "icon": "unlock",
+      "color": "darkolivegreen"
+    },
+    {
+      "id": 6,
+      "name": "Chess",
+      "icon": "wrench",
+      "color": "coral"
+    }
+  ],
+
+  "products": [
+    {
+      "id": 1,
+      "name": "Corda",
+      "description": "its a rope",
+      "richDescription": "beatiful rope",
+      "image": "string",
+      "images": ["xcdbdb"],
+      "brand": "adidas",
+      "price": 25,
+      "category": 2,
+      "countInStock": 20,
+      "rating": 4,
+      "numReviews": 10,
+      "isFeatured": true
+    },
+    {
+      "id": 2,
+      "name": "Stick",
+      "description": "its a hockey stick",
+      "richDescription": "beatiful rope",
+      "image": "string",
+      "images": ["xcdbdb"],
+      "brand": "adidas",
+      "price": 25,
+      "category": 2,
+      "countInStock": 20,
+      "rating": 4,
+      "numReviews": 10,
+      "isFeatured": true
+    },
+    {
+      "id": 3,
+      "name": "Ball",
+      "description": "its a ball!",
+      "richDescription": "beatiful ball",
+      "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.britannica.com%2Fsports%2Fball-sports&psig=AOvVaw23WKa_jgcQPv13M8GX32QR&ust=1670075238567000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCLDkuZyJ2_sCFQAAAAAdAAAAABAI",
+      "images": ["xcdbdb"],
+      "brand": "adidas",
+      "price": 25,
+      "category": 2,
+      "countInStock": 20,
+      "rating": 4,
+      "numReviews": 10,
+      "isFeatured": true
+    },
+    {
+      "id": 4,
+      "name": "Shoes",
+      "description": "its a pair of shoes",
+      "richDescription": "beatiful shoes",
+      "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fgeokids.pt%2Fgf%2Fproduto%2Fadidas-soccer-ball%2F&psig=AOvVaw23WKa_jgcQPv13M8GX32QR&ust=1670075238567000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCLDkuZyJ2_sCFQAAAAAdAAAAABAO",
+      "images": ["https://www.google.com/url?sa=i&url=https%3A%2F%2Fgeokids.pt%2Fgf%2Fproduto%2Fadidas-soccer-ball%2F&psig=AOvVaw23WKa_jgcQPv13M8GX32QR&ust=1670075238567000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCLDkuZyJ2_sCFQAAAAAdAAAAABAO"],
+      "brand": "adidas",
+      "price": 25,
+      "category": 2,
+      "countInStock": 20,
+      "rating": 4,
+      "numReviews": 10,
+      "isFeatured": true
+    }
+  ]
+}
