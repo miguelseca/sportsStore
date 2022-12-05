@@ -13,9 +13,6 @@ export class ProductItemComponent {
   constructor(private cartService: CartService) {}
 
   addToCart() {
-
-    console.log("adding to cart");
-    
     const cartItem: CartItem = {
       productId: this.product.id,
       quantity: 1

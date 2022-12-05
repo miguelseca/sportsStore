@@ -20,11 +20,13 @@ import { ProductItemComponent } from './shared/product-item/product-item.compone
 import { FeaturedProductsComponent } from './shared/featured-products/featured-products.component';
 import { CategoryListComponent } from './pages/category-list/category-list.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { GalleryComponent } from './shared/gallery/gallery.component';
+
 //================================Prime NG Modules =====================================================
 import { ButtonModule } from 'primeng/button';
 import {RatingModule} from 'primeng/rating';
 import {InputNumberModule} from 'primeng/inputnumber';
-import { GalleryComponent } from './shared/gallery/gallery.component';
+import {BadgeModule} from 'primeng/badge';
 
 
 @NgModule({
@@ -52,7 +54,8 @@ import { GalleryComponent } from './shared/gallery/gallery.component';
     HttpClientModule,
     RatingModule,
     InputNumberModule,
-    FormsModule
+    FormsModule,
+    BadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
