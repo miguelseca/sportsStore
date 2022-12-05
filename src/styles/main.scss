@@ -22,7 +22,8 @@
 
 //Pages
 @import './pages/home-page.scss';
-@import './pages/product-list-page.scss';
+@import './pages/product-page.scss';
+@import './pages/product-detail.scss';
 
 //Shared
 @import './shared/header.scss';
@@ -32,6 +33,7 @@
 @import './shared/banner.scss';
 @import './shared/categories-banner.scss';
 @import './shared/product-item.scss';
+@import './shared/gallery.scss';
 
 
 //para incluir bootstrap do URL:
@@ -47,7 +49,6 @@
     padding: 15px;
     margin: 0 auto;
     background-color: var(--surface-100);
-
 }
 
 

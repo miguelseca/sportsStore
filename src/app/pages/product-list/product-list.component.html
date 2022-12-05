@@ -1,1 +1,27 @@
-<p>product-list works!</p>
+<div class="products-page">
+    <div class="grid">
+      <div class="col-3">
+        <h4>Categories</h4>
+        <div class="field-checkbox" *ngFor="let category of categories">
+          <!-- <checkbox
+            [(ngModel)]="category.checked"
+            binary="true"
+            [inputId]="category.id"
+            (onChange)="categoryFilter()"
+          ></p-checkbox> -->
+          <label for="{{ category.id }}">{{ category.name }}</label>
+        </div>
+      </div>
+      <div class="col-9">
+        <div class="grid" *ngIf="products">
+          <div
+            [ngClass]="{ 'col-4': !isCategoryPage, 'col-3': isCategoryPage }"
+            *ngFor="let product of products"
+          >
+            <app-product-item [product]="product"></app-product-item>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
