@@ -5,6 +5,7 @@
 //Base
 @import './base/colors.scss';
 @import './base/fonts.scss';
+
 @import './base/mixins.scss';
 
 //PrimeNG
@@ -21,22 +22,24 @@
 @import './base/configuration.scss';
 
 //Pages
-@import './pages/home-page.scss';
-@import './pages/product-page.scss';
+
 @import './pages/product-detail.scss';
+@import './pages/category-page.scss';
+@import './pages/cart-page.scss';
+@import './pages/message.scss';
+@import './pages/contacts.scss';
+
 
 //Shared
 @import './shared/header.scss';
 @import './shared/footer.scss';
-@import './shared/nav.scss';
-@import './shared/search.scss';
 @import './shared/banner.scss';
 @import './shared/categories-banner.scss';
 @import './shared/product-item.scss';
 @import './shared/gallery.scss';
 
+@import './base/breakPoints.scss';
 
-//para incluir bootstrap do URL:
 //@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css');
 //para incluir bootstrap locla (depois de intalar com npm):
 //@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -45,10 +48,10 @@
 //(ou ainda colocar este path no angular.json (project.json neste caso pq foi o NX que lhe deu esse nome...))
 
 .container {
-    width: 1200px;
+    
     padding: 15px;
     margin: 0 auto;
-    background-color: var(--surface-100);
+    
 }
 
 

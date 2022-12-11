@@ -1,24 +1,125 @@
 <header>
-    <div class="grid">
-      <div class="col-3">
-          <div class="logo">
-              <img src="../../../assets/logo.png" alt=" logo"/>
-          </div>
-      </div>
-      <div class="col-4 search">
-          <app-search></app-search>
-          
-      </div>
-      
-      <div class="col-3 offset-1 navigation">
-          <app-nav></app-nav>
-      </div>
-      
-      <div class="col-1 tools" >
-          <i class="pi pi-user text-secundary" style="font-size: 1.5rem"></i>    
-          <i class="pi pi-shopping-cart text-secundary" pBadge style="font-size: 1.5rem" [value]="cartCount.toString()" severity="danger"></i>
-      </div>
+  <div class="grid">
+
+
+  <div class="col-12 logo">
+    <img src="../../../assets/logo.png" alt=" logo" />
+  </div>
+
+  
+    <div class="col-8 links">
+      <a class="nav-item nav-link" routerLink="/">Home</a>
+    <a class="nav-item nav-link" routerLink="/products">Products</a>
+    <a class="nav-item nav-link" routerLink="/contacts">Contacts</a>
+  </div>
+  
+  <div class="col ext">
+  
+    <div class="tools">
+    <i
+    class="pi pi-user text-secundary"
+    style="font-size: 1.5rem"
+    pTooltip="profile"
+    tooltipPosition="bottom"
+    routerLink="/cart"
+  ></i>
+
+
+
+  <i
+    *ngIf="cartCount"
+    class="pi pi-shopping-cart text-secundary"
+    pBadge
+    style="font-size: 1.5rem"
+    [value]="cartCount"
+    severity="danger"
+    pTooltip="my cart"
+    tooltipPosition="bottom"
+    routerLink="/cart"
+  ></i
+>
+
+  <i
+    *ngIf="!cartCount"
+    class="pi pi-shopping-cart text-secundary"
+    style="font-size: 1.5rem"
+    pTooltip="my cart"
+    tooltipPosition="bottom"
+    routerLink="/cart"
+  ></i>
+
+</div> 
+
+
+  </div> 
   
   </div>
-  </header>
+
+
   
+</header>
+
+
+<!-- 
+      <nav class="navbar navbar-expand-md navbar-light bg-white">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" routerLink="/">Home</a>
+            <a class="nav-item nav-link" routerLink="/products">Products</a>
+            <a class="nav-item nav-link" routerLink="/products">Contacts</a>
+                  
+          </div>
+        </div>        
+
+          <div class="navbar-nav my-2 my-lg-0">
+            
+              <i
+                class="pi pi-user text-secundary"
+                style="font-size: 1.5rem"
+                pTooltip="profile"
+                tooltipPosition="bottom"
+                routerLink="/cart"
+              ></i>
+            
+
+            
+              <i
+                *ngIf="cartCount"
+                class="pi pi-shopping-cart text-secundary"
+                pBadge
+                style="font-size: 1.5rem"
+                [value]="cartCount"
+                severity="danger"
+                pTooltip="my cart"
+                tooltipPosition="bottom"
+                routerLink="/cart"
+              ></i
+            >
+            
+              <i
+                *ngIf="!cartCount"
+                class="pi pi-shopping-cart text-secundary"
+                style="font-size: 1.5rem"
+                pTooltip="my cart"
+                tooltipPosition="bottom"
+                routerLink="/cart"
+              ></i>
+            
+          </div>
+      
+
+</nav>
+
+ -->

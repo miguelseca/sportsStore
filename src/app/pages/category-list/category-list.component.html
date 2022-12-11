@@ -1,19 +1,21 @@
-<p>category-list works! and this is cat {{ category }}</p>
-<div class="products-page">
-    <div class="grid">
-      <div class="col-3">
-      
+<div class="cat-banner hidden-xs" [ngStyle]="{'background-image': 'url(' + categories[category].image + ')'}">
+    <div class="grid" >
+      <div class="col-10 offset-1 banner-text">
+        <h1>{{ categories[category].name }}</h1>
+        <h2>Eco-Friendly & Sustainable Sports</h2>
       </div>
-      <div class="col-12">
+    </div>
+  </div>
+
+<div class="category-page">
+
         <div class="grid" *ngIf="products">
           <div
-            class="col-3"
+            class="col-12 sm:col-6 md:col-3 lg:col-2"
             *ngFor="let product of products"
           >
             <app-product-item [product]="product"></app-product-item>
           </div>
         </div>
       </div>
-    </div>
-  </div>
   

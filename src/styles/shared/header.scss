@@ -1,25 +1,50 @@
 header {
 
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   
   .logo {
+          
     img {
       width: 160px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      padding-bottom: 12px;
     }
-  }
-  .search {
-    padding-top: 25px;
-  }
+  }   
+      
+}
 
-  .navigation {
-    padding-top: 35px;
-  }
+a {
+  
+  
+  margin-left: 25px;
+  font-size:larger;
+   
+  &:hover {
+    color: $color-3;
+    text-decoration: underline;
+   }
 
-  .tools {
-    padding-top: 35px;
+}
 
-    .pi {
-      margin-right: 10px;
-    }
-  }
+.tools {
+ 
+  position: absolute;
+  right: 0px;
+  // width: 300px;
+  
+  min-width: 120px;
+  margin-bottom: 5px;
+  
+  
+}
+
+.pi {
+  margin-right: 20px;
+  cursor: pointer;
+}
+.pBadge:empty {
+  display: none;
+
 }

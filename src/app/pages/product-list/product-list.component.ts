@@ -48,11 +48,4 @@ export class ProductListComponent implements OnInit {
       });
   }
 
-  // categoryFilter() {
-  //   const selectedCategories = this.categories
-  //     .filter((category) => category.checked)
-  //     .map((category) => category.id);
-
-  //   this._getProducts(selectedCategories);
-  // }
 }

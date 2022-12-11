@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import CartItem from 'src/app/models/cartItem';
+import { CartService } from 'src/app/services/cart.service';
 import { ProductService } from 'src/app/services/product.service';
 import { Product } from '../../models/product';
 
@@ -11,12 +13,15 @@ import { Product } from '../../models/product';
 export class ProductDetailComponent implements OnInit {
   product!: Product;
   products: Product[] = [];
-  productid: number = 0;
-  quantity!: number;
+  productid!: number;
+  quantity: number = 1;
 
   constructor(
     private productService: ProductService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router,
+    private cartService: CartService,
+
   ) {}
 
   ngOnInit(): void {
@@ -24,12 +29,32 @@ export class ProductDetailComponent implements OnInit {
       params['productid']
         ? (this.productid = params['productid'])
         : (this.productid = 1);
-      // params['categoryid'] ? (this.isCategoryPage = true) : (this.isCategoryPage = false);
     });
     this.getProducts();
   }
 
-  addProductToCart() {}
+
+  addProductToCart() {
+
+    const cartItem: CartItem = {
+      productId: this.product.id,
+      quantity: this.quantity
+    };
+    this.cartService.setCartItem(cartItem);
+    
+  }
+
+  onBuyNowClick() {
+
+    this.addProductToCart();
+    this.router.navigate(['cart']);
+    
+    
+    
+  }
+
+
+
 
   private getProducts() {
     this.productService
@@ -39,7 +64,7 @@ export class ProductDetailComponent implements OnInit {
         console.log(prod);
 
         this.products = prod;
-        this.product = prod[0];
+        this.product = prod[this.productid];
       });
   }
 }

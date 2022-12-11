@@ -5,15 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'; 
 
-
 //================================ COMPONENTS ==========================================================
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ProductListComponent } from './pages/product-list/product-list.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
-import { NavComponent } from './shared/nav/nav.component';
-import { SearchComponent } from './shared/search/search.component';
 import { BannerComponent } from './shared/banner/banner.component';
 import { CategoriesComponent } from './shared/categories-banner/categories.component';
 import { ProductItemComponent } from './shared/product-item/product-item.component';
@@ -27,6 +24,12 @@ import { ButtonModule } from 'primeng/button';
 import {RatingModule} from 'primeng/rating';
 import {InputNumberModule} from 'primeng/inputnumber';
 import {BadgeModule} from 'primeng/badge';
+import {CheckboxModule} from 'primeng/checkbox';
+import {ToastModule} from 'primeng/toast';
+import { CartPageComponent } from './pages/cart-page/cart-page.component';
+import {TooltipModule} from 'primeng/tooltip';
+import { MessageComponent } from './pages/message/message.component';
+import { ContactsComponent } from './pages/contacts/contacts.component';
 
 
 @NgModule({
@@ -36,15 +39,17 @@ import {BadgeModule} from 'primeng/badge';
     ProductListComponent,
     FooterComponent,
     HeaderComponent,
-    NavComponent,
-    SearchComponent,
     BannerComponent,
     CategoriesComponent,
     ProductItemComponent,
     FeaturedProductsComponent,
     CategoryListComponent,
     ProductDetailComponent,
-    GalleryComponent
+    GalleryComponent,
+    CartPageComponent,
+    MessageComponent,
+    ContactsComponent
+  
   ],
   imports: [
     BrowserModule,
@@ -55,7 +60,11 @@ import {BadgeModule} from 'primeng/badge';
     RatingModule,
     InputNumberModule,
     FormsModule,
-    BadgeModule
+    BadgeModule,
+    CheckboxModule,
+    ToastModule,
+    TooltipModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

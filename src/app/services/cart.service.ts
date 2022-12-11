@@ -1,5 +1,5 @@
 import { Injectable, OnInit } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 import Cart from '../models/cart';
 import CartItem from '../models/cartItem';
 export const CART_KEY = 'cart';
@@ -8,28 +8,29 @@ export const CART_KEY = 'cart';
   providedIn: 'root',
 })
 export class CartService implements OnInit {
-  cart$: BehaviorSubject<Cart> = new BehaviorSubject(this.getCart());
+  cart$: Subject<Cart> = new Subject();
+  cart!: Cart; 
 
   constructor() {}
 
   ngOnInit(): void {
-    this.initCartLocalStorage();
   }
 
-  initCartLocalStorage() {
-    const cart: Cart = this.getCart();
-    if (!cart) {
-      const initialCart = {
-        items: [],
-      };
-      localStorage.setItem(CART_KEY, JSON.stringify(initialCart));
-    } else {
-      this.cart$.next(cart);
-    }
-  }
+  
 
   getCart(): Cart {
-    return JSON.parse(localStorage.getItem(CART_KEY)!);
+  
+    this.cart = JSON.parse(localStorage.getItem(CART_KEY)!);
+
+    console.log("this.cart");
+    console.log(this.cart);
+
+    if (!this.cart) {
+      this.cart = {items:[]};      
+    } else {
+      this.cart$.next(this.cart);
+    }
+    return this.cart;
   }
 
   setCartItem(cartItem: CartItem): Cart {

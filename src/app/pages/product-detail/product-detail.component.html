@@ -1,4 +1,4 @@
-<div class="product-page" *ngIf="product">
+<div class="product-detail" *ngIf="product">
     <div class="grid">
       <div class="col-6">
         <app-gallery [images]="product.images!"></app-gallery>
@@ -36,6 +36,8 @@
             type="button"
             label="Buy Now"
             class="button-rounded mr-2"
+            (click)="onBuyNowClick()"
+          
           ></button>
           <button
             pButton
@@ -43,7 +45,7 @@
             type="button"
             label="Add to Cart"
             class="button-rounded"
-            (onClick)="addProductToCart()"
+            (click)="addProductToCart()"
           ></button>
         </div>
       </div>

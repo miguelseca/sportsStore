@@ -1,19 +1,22 @@
-<div class="banner">
+<div class="banner hidden-xs">
+  <video
+    class="video"
+    src="../../../assets/banner.webm"
+    autoplay
+    muted
+    loop
+    ></video>
     <div class="grid">
-      <div class="col-5 offset-1 banner-text">
-        <h1>The best Products</h1>
-        <h2>In every category</h2>
+      <div class="col-10 offset-1 banner-text">
+        <h1>Nature first</h1>
+        <h2>Eco-Friendly & Sustainable Sports</h2>
         <p-button
-          styleClass="mt-4 banner-button"
-          label="See more"
-          icon="pi pi-chevron-right"
-          iconPos="right"
+        styleClass="mt-4 banner-button"
+        label="Our message"
+        icon="pi pi-chevron-right"
+        iconPos="right"
+        (onClick)="onMessageClick()"
         ></p-button>
       </div>
-      <div class="col-4 banner-image animate__animated animate__rotateIn">
-       <img src="../../../assets/banner-image.svg" alt="" />
-    </div>
     </div>
   </div>
-
-  

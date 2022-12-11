@@ -10,13 +10,18 @@ import CartItem from 'src/app/models/cartItem';
 export class ProductItemComponent {
   @Input() product!: Product;
 
-  constructor(private cartService: CartService) {}
+  constructor(
+    private cartService: CartService
+  ) {}
+
+   
 
   addToCart() {
+   
     const cartItem: CartItem = {
       productId: this.product.id,
-      quantity: 1
-    }
+      quantity: 1,
+    };
     this.cartService.setCartItem(cartItem);
   }
 }

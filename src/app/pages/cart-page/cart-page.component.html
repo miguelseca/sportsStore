@@ -1,0 +1,77 @@
+<div class="cart-page">
+  <div class="grid">
+    <div class="col-8">
+      <div>
+        <button class="button" (click)="backToShop()">
+          <i class="pi pi-arrow-left"></i>Continue shopping
+        </button>
+      </div>
+      <div>
+        <h4>My Cart: {{ cartCount }} Item(s)</h4>
+      </div>
+      <div class="cart-shipping mb-5">
+        Shipping after the payment, Delivery time : 1 to 4 working days
+      </div>
+      <div
+        class="cart-item mb-5"
+        *ngFor="let cartItem of products; index as index"
+      >
+        <div class="grid">
+          <div class="col-2 cart-item-image">
+            <img [src]="cartItem.image" [attr.alt]="cartItem.name" />
+          </div>
+          <div class="col-6">
+            <div class="cart-item-name">{{ cartItem.name }}</div>
+            <div class="cart-item-price">{{ cartItem.price | currency }}</div>
+            <div class="cart-item-remove">
+              <i
+                class="pi pi-trash"
+                pTooltip="delete item"
+                (click)="removeItem()"
+              ></i>
+            </div>
+          </div>
+          <div class="col-2 cart-item-quantity">
+            
+              <p-inputNumber
+                mode="decimal"
+                [inputId]="cartItem.id"
+                [min]="1"
+                [max]="100"
+                [(ngModel)]="cartCount"
+              >
+            </p-inputNumber>
+          <div class="cart-item-subtotal">
+            Subtotal:
+            <span class="cart-item-subtotal-value">{{ 50 | currency }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="order-summary">
+      <h3>Order Summary</h3>
+      <div class="summary-price">
+        <span>Items Price</span>
+        <span>{{ 385 | currency }}</span>
+      </div>
+      <div class="summary-price">
+        <span>Packing & Shipping</span>
+        <span class="free">Free</span>
+      </div>
+      <div class="to-checkout">
+        <div class="summary-price">
+          <span>Total Price</span>
+          <span>{{ 385 | currency }}</span>
+        </div>
+        <div class="checkout-button">
+          <p-button label="Checkout"></p-button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+</div>
+
