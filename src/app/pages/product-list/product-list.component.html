@@ -1,15 +1,47 @@
 <div class="products-page">
   <div class="grid">
     <div class="col-3">
-      <h4>Categories</h4>
-      <div class="field-checkbox" *ngFor="let category of categories">
-        <p-checkbox></p-checkbox>
-        <label for="{{ category.id }}">{{ category.name }}</label>
+      <h5>Filter by type</h5>
+      <div class="field-checkbox">
+        <p-checkbox name="group1" value="Footwear" inputId="ny"></p-checkbox>
+        <label for="ny">Footwear</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="group1" value="Bags"></p-checkbox>
+        <label for="sf">Bags</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="group1" value="Consumable" inputId="la"></p-checkbox>
+        <label for="la">Consumable</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="group1" value="Equipment" inputId="ch"></p-checkbox>
+        <label for="ch">Equipment</label>
+      </div>
+
+      <h5>Filter by price</h5>
+      <div class="field-checkbox">
+        <p-checkbox name="group1" value="Footwear" inputId="ny"></p-checkbox>
+        <label for="ny">less than 20€</label>
+      </div>
+
+      <div class="field-checkbox">
+        <p-checkbox name="group1" value="Bags"></p-checkbox>
+        <label for="sf">20€ - 50€</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="group1" value="Consumable" inputId="la"></p-checkbox>
+        <label for="la">50€ - 100€</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="group1" value="Equipment" inputId="ch"></p-checkbox>
+        <label for="ch">more than 100€</label>
       </div>
     </div>
+
     <div class="col-9">
       <div class="grid" *ngIf="products">
-        <div class="col-6 md:col-4 lg:col-3" *ngFor="let product of products">
+        <div class="col-12 md:col-6 lg:col-4" *ngFor="let product of products">
           <app-product-item [product]="product"></app-product-item>
         </div>
       </div>

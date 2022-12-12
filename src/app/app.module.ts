@@ -29,8 +29,7 @@ import {ToastModule} from 'primeng/toast';
 import { CartPageComponent } from './pages/cart-page/cart-page.component';
 import {TooltipModule} from 'primeng/tooltip';
 import { MessageComponent } from './pages/message/message.component';
-import { ContactsComponent } from './pages/contacts/contacts.component';
-
+import {InputTextModule} from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
@@ -48,7 +47,6 @@ import { ContactsComponent } from './pages/contacts/contacts.component';
     GalleryComponent,
     CartPageComponent,
     MessageComponent,
-    ContactsComponent
   
   ],
   imports: [
@@ -64,7 +62,7 @@ import { ContactsComponent } from './pages/contacts/contacts.component';
     CheckboxModule,
     ToastModule,
     TooltipModule,
-    
+    InputTextModule
   ],
   providers: [],
   bootstrap: [AppComponent]

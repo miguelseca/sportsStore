@@ -1,17 +1,19 @@
 .banner {
+  padding-left: -15px;
+  padding-right: -15px;
   position: relative;
   overflow: hidden;
   display: flex;
-  height: 250px;
+  height: 400px;
   width: 100%;
-  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
 
   &-text {
     position: absolute;
-    color: $color-1;
+    color: white;
     margin-top: 40px;
     margin-left: 50px;
-    opacity: 1;
+    
 
     h1 {
       margin: 0;
